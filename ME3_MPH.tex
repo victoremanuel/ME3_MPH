@@ -1,12 +1,12 @@
 \documentclass[portugues]{sobraep}
 
-\titulo{MOTOR DE PASSO HÕBRIDO}
+\titulo{MOTOR DE PASSO H√çBRIDO}
 
 \title{HYBRID STEPPER MOTOR}
 
 
 \author{Callebe S. Barbosa$^{1}$, Rafael C. Bonotto$^{2}$, Raphael H. Machado$^{3}$, Victor Emanuel S. Barbosa$^{4}$\\
-	\normalsize e-mail: victorbarbosa@alnos.utfpr.edu.br, @alnos.utfpr.edu.br, @alnos.utfpr.edu.br, @alnos.utfpr.edu.br
+	\normalsize e-mail: $^{4}$victorbarbosa@alunos.utfpr.edu.br, $^{2}$bonotto@alunos.utfpr.edu.br, @alunos.utfpr.edu.br, @alunos.utfpr.edu.br
 }
 
 \begin{document}
@@ -14,11 +14,11 @@
 \maketitle
 
 \begin{resumo}
-	O objetivo deste documento È descrever o princÌpio de funcionamento, caracterÌsticas construtivas, modelo matem·tico da motor de passo hÌbrido, alÈm de mostrar algumas aplicaÁıes.
+	O objetivo deste documento √© descrever o princ√≠pio de funcionamento, caracter√≠sticas construtivas, modelo matem√°tico da motor de passo h√≠brido, al√©m de mostrar algumas aplica√ß√µes.
 \end{resumo}
 
 \begin{palavraschave }
-	ElÈtrica, M·quinas, M·quinas elÈtricas, Motor de passo hÌbrido, Motor.
+	El√©trica, M√°quinas, M√°quinas el√©tricas, Motor de passo h√≠brido, Motor.
 \end{palavraschave }
 
 \englishtitle
@@ -31,44 +31,51 @@
 	Electrical, Machinery, Electrical equipment, Hybrid stepper motor, Motor.
 \end{keywords}
 
-\newpage
+%\newpage
 \section*{NOMENCLATURA}
 
-\symbolnomenclature{$P$}{N˙mero de polos.}
-\symbolnomenclature{$V_{qd}$}{Componentes $dq$ da tens„o de estator.}
+\symbolnomenclature{HSM}{\textit{Hybrid Stepper Motor}, Motor de passo h√≠brido}
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% SeÁıes
+% Se√ß√µes
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-% IntroduÁ„o
-\section{INTRODU«√O}
+% Introdu√ß√£o
+\section{INTRODU√á√ÉO}
+	
+	Os motores de passo h√≠brido, ou \textit{Hybrid Stepper Motor} (da sigla \textbf{HSM}) como s√£o citados na literatura, s√£o comumente utilizados em aplica√ß√µes que demandam de alta precis√£o em motores de corrente cont√≠nua \cite{ieeeRusso}.
+	
+	O HSM, como ser√° referido neste trabalho, combina as vantagens do motor de relut√¢ncia vari√°vel (\textit{Variable Reluctance Motor}, da sigla \textbf{VRM}) e do motor de im√£ permanente (\textit{Permanent Magnet Motor}, da sigla \textbf{PMM}). Como em outros motores el√©tricos, o motor de passo h√≠brido √© composto por um estator e um rotor com certas caracter√≠sticas que caracterizam-o como um motor de passo h√≠brido.
+	
+	O estator √© composto por um dado n√∫mero de polos magn√©ticos relacionados com os enrolamentos colocados nele, com um n√∫mero espec√≠fico de dentes do estator. %explicar melhor
+	
+	O rotor √© composto por n√∫cleos magn√©ticos, com quantidade dependente do n√∫mero de fases de acionamento do motor, com diferentes quantidades de dentes que s√£o separados por im√£s permanentes. Essa quantidade %terminar
 
-\section{PrincÌpio de funcionamento}
-O motor de passo hÌbrido congrega caracterÌsticas do motor de passo de Ìm„ permanente e o motor de passo de relut‚ncia vari·vel. Para entender como o motor de passo hÌbrido funciona, primeiramente ir· ser mostrado brevemente o princÌpio de funcionamento destes dois outros tipos de motores de passo ora citados, bem como o que s„o motores de passo, por fim ser· explicado o funcionamento do motor de passo hÌbrido em funÁ„o como um motor aperfeiÁoado dos outros dois motores de passo, a fim da explicaÁ„o se tornar mais familiarizada para o leitor.  
+\section{Princ√≠pio de funcionamento}
+Como explanado anteriormente, o motor de passo h√≠brido congrega caracter√≠sticas do motor de passo de √≠m√£ permanente e o motor de passo de relut√¢ncia vari√°vel. Para entender como o motor de passo h√≠brido funciona, primeiramente ir√° ser mostrado brevemente o princ√≠pio de funcionamento destes dois outros tipos de motores de passo ora citados, bem como o que s√£o motores de passo, por fim ser√° explicado o funcionamento do motor de passo h√≠brido em fun√ß√£o como um motor aperfei√ßoado dos outros dois motores de passo, a fim da explica√ß√£o se tornar mais familiarizada para o leitor.  
 
-	\subsection{O que È motor de passo?}
-	S„o m·quinas elÈtricas que consistem em um estator com enrolamentos de excitaÁ„o e um rotor magnÈtico com saliÍncias. Neles o conjugado È produzido pela tendÍncia do rotor a se alinhar com a onda de fluxo produzida pelo estator, de modo a maximizar os fluxos concatenados que resultam da aplicaÁ„o de uma dada corrente no estator. No motor de passo as fases dos enrolamentos do estator s„o excitadas sequencialmente, fazendo o rotor girar na forma de uma sequÍncia de passos, com ‚ngulos definidos a cada passo, devido ‡ tendÍncia de alinhamento do rotor com a onda de fluxo do estator. As principais caracterÌsticas dos motores de passo s„o: 
+	\subsection{O que √© motor de passo?}
+	S√£o m√°quinas el√©tricas que consistem em um estator com enrolamentos de excita√ß√£o e um rotor magn√©tico com sali√™ncias. Neles o conjugado √© produzido pela tend√™ncia do rotor a se alinhar com a onda de fluxo produzida pelo estator, de modo a maximizar os fluxos concatenados que resultam da aplica√ß√£o de uma dada corrente no estator. No motor de passo as fases dos enrolamentos do estator s√£o excitadas sequencialmente, fazendo o rotor girar na forma de uma sequ√™ncia de passos, com √¢ngulos definidos a cada passo, devido √† tend√™ncia de alinhamento do rotor com a onda de fluxo do estator. As principais caracter√≠sticas dos motores de passo s√£o: 
 	
 	\begin{itemize}
-		\item \textbf{InexistÍncia de escovas:} n„o necessitam de escovas, reduzindo a maioria das falhas comumente encontradas nos outros motores elÈtricos, como faiscamento e perdas Ùhmicas no rotor e escovas.
-		\item \textbf{IndependÍncia da carga:} giram com uma dada velocidade independentemente da carga, desde que tal carga n„o exceda as caracterÌstica de torque do motor.
-		\item \textbf{Menos sensores} se movem com incrementos quantific·veis, desde que com torque especificado, podendo ter conhecimento da posiÁ„o do eixo.
-		\item \textbf{PosiÁ„o de repouso:} È possÌvel manter o eixo estacion·rio, desde que seu torque seja respeitado. 
+		\item \textbf{Inexist√™ncia de escovas:} n√£o necessitam de escovas, reduzindo a maioria das falhas comumente encontradas nos outros motores el√©tricos, como faiscamento e perdas √¥hmicas no rotor e escovas.
+		\item \textbf{Independ√™ncia da carga:} giram com uma dada velocidade independentemente da carga, desde que tal carga n√£o exceda as caracter√≠stica de torque do motor.
+		\item \textbf{Menos sensores} se movem com incrementos quantific√°veis, desde que com torque especificado, podendo ter conhecimento da posi√ß√£o do eixo.
+		\item \textbf{Posi√ß√£o de repouso:} √© poss√≠vel manter o eixo estacion√°rio, desde que seu torque seja respeitado. 
 	\end{itemize}
 	
 	\subsection{Quais os tipos construtivos de motores de passo?}
 	
-	\subsection{Funcionamento do motor de passo hÌbrido}
+	\subsection{Funcionamento do motor de passo h√≠brido}
 
-\section{CaracterÌsticas construtivas}
+\section{Caracter√≠sticas construtivas}
 
-\section{Modelo matem·tico}
+\section{Modelo matem√°tico}
 
-\section{Exemplos de aplicaÁıes}
-Os motores de passo, inclusive o de passo hÌbrido, s„o amplamente utilizados em sistemas de controle digital, motores de alimentaÁ„o de papel e posicionamento da cabeÁa em unidade de discos, entre outras. Por n„o terem enrolamentos no rotor, eles tÍm boa densidade de potÍncia, pois n„o h· necessidade de grande dissipaÁ„o de calor do rotor, e tambÈm tÍm grande aplicaÁ„o em aplicaÁıes onde È necess·rio realizar movimentos precisos e ter conhecimento da posiÁ„o do rotor sem necessidade de realimentaÁ„o com sensores. O motor de passo hÌbrido ainda tem melhores caracterÌsticas de conjugado, velocidade e precis„o nos passos.
+\section{Exemplos de aplica√ß√µes}
+Os motores de passo, inclusive o de passo h√≠brido, s√£o amplamente utilizados em sistemas de controle digital, motores de alimenta√ß√£o de papel e posicionamento da cabe√ßa em unidade de discos, entre outras. Por n√£o terem enrolamentos no rotor, eles t√™m boa densidade de pot√™ncia, pois n√£o h√° necessidade de grande dissipa√ß√£o de calor do rotor, e tamb√©m t√™m grande aplica√ß√£o em aplica√ß√µes onde √© necess√°rio realizar movimentos precisos e ter conhecimento da posi√ß√£o do rotor sem necessidade de realimenta√ß√£o com sensores. O motor de passo h√≠brido ainda tem melhores caracter√≠sticas de conjugado, velocidade e precis√£o nos passos.
 
-\section{CONCLUS’ES}
+\section{CONCLUS√ïES}
 
 
 

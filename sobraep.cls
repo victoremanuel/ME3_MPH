@@ -15,7 +15,7 @@
 %%  and version 1.3 or later is part of all distributions of LaTeX
 %%  version 2005/12/01 or later.
 %%
-%%  The Current Maintainer of this work is Cássio Luciano Baratieri.
+%%  The Current Maintainer of this work is CÃ¡ssio Luciano Baratieri.
 %%
 %%*******************************************************************
 
@@ -40,8 +40,6 @@
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
-\RequirePackage[latin1]{inputenc}
-\RequirePackage[T1]{fontenc}
 \RequirePackage{graphicx}
 \RequirePackage{float}
 \RequirePackage{subfigure}
@@ -51,6 +49,12 @@
 \RequirePackage{fancybox}
 \RequirePackage{lastpage}
 \RequirePackage{color}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{tikz}
+\usepackage{fixltx2e}
+\usepackage{circuitikz}
 \RequirePackage{amssymb}
 \RequirePackage{amsfonts}
 \RequirePackage{amsthm}
@@ -69,7 +73,7 @@
 %*******************************************************************
 % Options
 
-%Padrão
+%PadrÃ£o
 \def\configlanguage{2}
 
 \DeclareOption{english}
@@ -108,7 +112,7 @@
 
 \newenvironment{palavraschave }{\noindent\hspace*{4mm}\normalsize{\bf{\em Palavras-chave --}}\normalsize\bf}{\par\rm\small\medskip\medskip}
 
-%Seções
+%SeÃ§Ãµes
 \setcounter{secnumdepth}{3}
 \def\thesection {\Roman{section}.\hskip-7.2pt}
 \def\thesubsection {\Alph{subsection}.\hskip-7.2pt}
@@ -152,24 +156,24 @@
 \addto\captionsenglish{\renewcommand{\tablename}{\bf TABLE}}
 \addto\captionsbrazil{\renewcommand{\tablename}{\bf TABELA}}
 \addto\captionsenglish{\renewcommand{\refname}{REFERENCES}}
-\addto\captionsbrazil{\renewcommand{\refname}{REFERÊNCIAS}}
+\addto\captionsbrazil{\renewcommand{\refname}{REFERÃŠNCIAS}}
 
-%Elimina a numerção de página
+%Elimina a numerÃ§Ã£o de pÃ¡gina
 \pagestyle{empty}
 
-%Espaçamento entre paragrafos
+%EspaÃ§amento entre paragrafos
 \setlength{\parskip}{0pt}
 
 %indent config
 \setlength\parindent{4.0mm}
 
-%Configura espaçamento entre colunas
+%Configura espaÃ§amento entre colunas
 \setlength\columnsep{6.0mm}
 
-%Configura espaçamento entre linhas
+%Configura espaÃ§amento entre linhas
 \renewcommand{\baselinestretch}{0.985}
 
-%Configuração de Listas
+%ConfiguraÃ§Ã£o de Listas
 \def\@listI{\leftmargin 7.5mm \leftmargini\parsep  \topsep 0pt  \itemsep -1.25mm \partopsep 10pt \listparindent 0pt 
 	              \labelsep 4.5mm }
 
