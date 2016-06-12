@@ -110,7 +110,7 @@
 
 \newenvironment{keywords}{\noindent\hspace*{4mm}\normalsize{\bf{\em Keywords --}}\normalsize\bf}{\par\rm\small\medskip}
 
-\newenvironment{palavraschave }{\noindent\hspace*{4mm}\normalsize{\bf{\em Palavras-chave --}}\normalsize\bf}{\par\rm\small\medskip\medskip}
+\newenvironment{palavraschave}{\noindent\hspace*{4mm}\normalsize{\bf{\em Palavras-chave --}}\normalsize\bf}{\par\rm\small\medskip\medskip}
 
 %Seções
 \setcounter{secnumdepth}{3}
