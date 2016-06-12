@@ -36,6 +36,61 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	
 	Verifica-se pela Fig. \ref{HSMestatorrotor} que o estator também é seccionado com alguns dentes. A razão do estator também possuir esses dentes é com o propósito de fazer o motor operar, o que será explanado a seguir.
 	
-	\subsection{Funcionamento do motor de passo híbrido}
+	\subsection{Princípio de funcionamento básico de um motor de passo híbrido}
 	
-	%PARTE QUE O BONOTTO SE RESPONSABILIZA EM TERMINAR :)
+	Conforme pode ser visto na Fig. \ref{HSMestatorrotor}, o rotor de um HSM é seccionado em polos magnéticos que chamaremos de seção sul e seção norte, também denominados \textit{rotor cups}. Essa separação pode ser vista na Fig. \ref{rotorsec}.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.45]{images/hsm_operation/hsmrotorreal}
+		\caption{Rotor seccionado em seção sul (S) e seção norte (N) \cite{ieeeRusso}}
+		\label{rotorsec}
+	\end{figure}
+	
+	Como apresentado anteriomente e melhor explanado na seção de Características Construtivas do HSM, o rotor é feito com material ferromagnético. De maneira simplificada, apresenta-se o rotor apresentado na Fig. \ref{rotorsec} da seguinte maneira, conforme a Fig. \ref{rotor1}.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.2]{images/hsm_operation/rotormag1}
+		\caption{Rotor simplificado de HSM}
+		\label{rotor1}
+	\end{figure}
+	
+	Ao rotor mostrado na Fig. \ref{rotor1}, adicionam-se os dentes em cada seção polar, conforme Fig. \ref{rotor2}. O número de dentes determina o número de passo por revolução do motor. Também determina a resolução do passo.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.2]{images/hsm_operation/rotormag2}
+		\caption{Rotor simplificado de HSM com dentes}
+		\label{rotor2}
+	\end{figure}
+	
+	De acordo com a Fig. \ref{rotor3}, verifica-se que os dentes de cada seção polar são espaçados com uma certa compensação devido a alinhação dos dentes. 
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.3]{images/hsm_operation/rotormag3}
+		\caption{Visão superior do rotor de um HSM}
+		\label{rotor3}
+	\end{figure}
+	
+	Essa compensação funciona da seguinte forma: \emph{um dente de uma seção está sempre entre dois dentes da outra seção}. Visualmente, temos a seguinte distribuição de dentes representada na Fig. \ref{rotor4}.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.2]{images/hsm_operation/rotormag4}
+		\caption{Visão superior do espaçamento entre os dentes das seções do rotor}
+		\label{rotor4}
+	\end{figure}
+	
+	Considerando um estator simples de duas fases com quatro enrolamentos, insere-se os enrolamentos na expressão gráfica apresentada anteriormente na Fig. \ref{rotor3}. O HSM simplificado para fins de explicação está representado na Fig \ref{hsm_superior}. 
+	
+	 \begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.3]{images/hsm_operation/etapa1}
+		\caption{Visão superior de um HSM com estator e rotor}
+		\label{hsm_superior}
+	\end{figure}
+	
+	
+	
