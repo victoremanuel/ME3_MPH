@@ -52,18 +52,20 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[!h]
 		\centering 
 		\includegraphics[scale=0.2]{images/hsm_operation/rotormag1}
-		\caption{Rotor simplificado de HSM}
+		\caption{Material ferromagnético do rotor simplificado de um HSM (Sem dentes)}
 		\label{rotor1}
 	\end{figure}
 	
-	Ao rotor mostrado na Fig. \ref{rotor1}, adicionam-se os dentes em cada seção polar, conforme Fig. \ref{rotor2}. O número de dentes determina o número de passo por revolução do motor. Também determina a resolução do passo.
+	Ao rotor mostrado na Fig. \ref{rotor1}, adicionam-se os dentes em cada seção polar, conforme Fig. \ref{rotor2}. O número de dentes determina o número de passo por revolução do motor.
 	
 	\begin{figure}[!h]
 		\centering 
 		\includegraphics[scale=0.2]{images/hsm_operation/rotormag2}
-		\caption{Rotor simplificado de HSM com dentes}
+		\caption{Rotor simplificado de um HSM (Com dentes)}
 		\label{rotor2}
 	\end{figure}
+	
+	O número de dentes também determina a resolução do passo: \emph{quanto mais dentes, menor a resolução}.
 	
 	De acordo com a Fig. \ref{rotor3}, verifica-se que os dentes de cada seção polar são espaçados com uma certa compensação devido a alinhação dos dentes. 
 	
@@ -74,7 +76,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 		\label{rotor3}
 	\end{figure}
 	
-	Essa compensação funciona da seguinte forma: \emph{um dente de uma seção está sempre entre dois dentes da outra seção}. Visualmente, temos a seguinte distribuição de dentes representada na Fig. \ref{rotor4}.
+	Essa compensação funciona da seguinte forma: \emph{um dente de uma seção está sempre entre dois dentes da outra seção, alternando esta sequência}. Visualmente, temos a seguinte distribuição de dentes representada na Fig. \ref{rotor4}.
 	
 	\begin{figure}[!h]
 		\centering 
@@ -83,14 +85,67 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 		\label{rotor4}
 	\end{figure}
 	
-	Considerando um estator simples de duas fases com quatro enrolamentos, insere-se os enrolamentos na expressão gráfica apresentada anteriormente na Fig. \ref{rotor3}. O HSM simplificado para fins de explicação está representado na Fig \ref{hsm_superior}. 
+	Considerando um estator simples, com núcleo de metal, de duas fases com quatro enrolamentos, cada fase com dois enrolamentos (enrolamentos ligados em série), insere-se os enrolamentos na expressão gráfica apresentada anteriormente na Fig. \ref{rotor3}. O HSM simplificado para fins de explicação está representado na Fig \ref{hsm_superior}. 
 	
 	 \begin{figure}[!h]
 		\centering 
 		\includegraphics[scale=0.3]{images/hsm_operation/etapa1}
-		\caption{Visão superior de um HSM com estator e rotor}
+		\caption{Visão superior de um HSM, com estator e rotor em destaque}
 		\label{hsm_superior}
 	\end{figure}
 	
+	Com o estator e o rotor juntos, o princípio de funcionamento baseia-se em acionar uma das fases com um determinado sentido de corrente com o objetivo de magnetizar o núcleo metálico do estator.
 	
+	Em um dado momento, antes de acionar as bobinas de uma das fases, o estator se encontra em um estágio conforme a Fig. \ref{passo1}. 
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.16]{images/hsm_operation/visaopasso1}
+		\caption{Estator e rotor antes do acionamento das bobinas de uma fase}
+		\label{passo1}
+	\end{figure}
+	
+	Conforme a Fig. \ref{passo1}, assim que se aciona uma fase de forma com que a corrente nos enrolamentos crie um campo magnético no núcleo do estator, o estator se encontra com a seguinte polaridade magnética, conforme Fig. \ref{acionamento1}.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.3]{images/hsm_operation/etapa3}
+		\caption{Estator e rotor do HSM ao acionar uma das fases (núcleos do estator magnetizados horizontalmente)}
+		\label{acionamento1}
+	\end{figure}
+	
+	É importante relatar que os enrolamentos acionados estão em \textbf{série}, de forma com que o campo magnético direcionado para os dentes do rotor tenham a mesma polaridade. Essa opção de acionamento será melhor explanada na seção de Acionamentos do HSM.
+	
+	Com o núcleo do estator magnetizado como um eletroimã, em que a polaridade NORTE está direcionada ao rotor, tem-se a seguinte representação gráfica conforme a Fig. \ref{passo2}.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.16]{images/hsm_operation/visaopasso2}
+		\caption{Estator e rotor de um HSM ao acionar uma das fases}
+		\label{passo2}
+	\end{figure}
+	
+	Com isso, \textbf{ocorre uma atração magnética entre o dente da seção SUL do rotor e o dente do estator, polarizado como NORTE} e, de forma análoga, \textbf{ocorre uma repulsão magnética entre o dente da seção SUL do rotor e o dente do estator, polarizado como NORTE}.
+	
+	Esse movimento dos dentes do rotor devido a magnetização do núcleo do estator no motor de passo híbrido é a representação do \textbf{passo} do motor.
+	
+	A movimentação está indicada pelas setas na Fig. \ref{passo3}, conforme foi explanado.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.16]{images/hsm_operation/visaopasso3}
+		\caption{Movimentação do rotor devido a magnetização do estator}
+		\label{passo3}
+	\end{figure}  
+	
+	Para efetuar mais um passo, basta acionar a outra fase do motor com o mesmo sentido de corrente, de forma com que seja magnetizado os núcleos de metal do estator pelo outro grupo de bobinas, conforme Fig. \ref{acionamento2}.
+	
+	\begin{figure}[!h]
+		\centering 
+		\includegraphics[scale=0.3]{images/hsm_operation/etapa2}
+		\caption{Estator e rotor do HSM ao acionar outra fase (núcleos do estator magnetizados verticalmente)}
+		\label{acionamento2}
+	\end{figure}
+	
+	Repetindo o mesmo procedimento, o motor continuará executando os passos com a angulação determinada pela sequência e forma de acionamento das bobinas. Para \textbf{inverter o sentido de rotação do rotor}, basta inverter o sentido da corrente elétrica que flui pela fase, consequentemente pelos enrolamentos, e magnetizará o núcleo do estator que suporta os enrolamentos, como foi explanado durante toda esta seção do trabalho. 
 	
