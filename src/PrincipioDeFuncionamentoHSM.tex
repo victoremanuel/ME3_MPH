@@ -1,0 +1,41 @@
+Como explanado anteriormente, o motor de passo híbrido congrega características do motor de passo de ímã permanente e o motor de passo de relutância variável. Para entender como o motor de passo híbrido funciona, primeiramente irá ser mostrado brevemente o princípio de funcionamento destes dois outros tipos de motores de passo ora citados, bem como o que são motores de passo, por fim será explicado o funcionamento do motor de passo híbrido em função como um motor aperfeiçoado dos outros dois motores de passo, a fim da explicação se tornar mais familiarizada para o leitor.  
+
+	\subsection{Motor de passo}
+	São máquinas elétricas que consistem em um estator com enrolamentos de excitação e um rotor magnético com saliências. Neles o conjugado é produzido pela tendência do rotor a se alinhar com a onda de fluxo produzida pelo estator, de modo a maximizar os fluxos concatenados que resultam da aplicação de uma dada corrente no estator. No motor de passo as fases dos enrolamentos do estator são excitadas sequencialmente, fazendo o rotor girar na forma de uma sequência de passos, com ângulos definidos a cada passo, devido à tendência de alinhamento do rotor com a onda de fluxo do estator. \cite{Fitz} As principais características dos motores de passo são: \cite{MoonsHSM} 
+	
+	\begin{itemize}
+		\item \textbf{Inexistência de escovas:} não necessitam de escovas, reduzindo a maioria das falhas comumente encontradas nos outros motores elétricos, como faiscamento e perdas ôhmicas no rotor e escovas.
+		\item \textbf{Independência da carga:} giram com uma dada velocidade independentemente da carga, desde que tal carga não exceda as característica de torque do motor.
+		\item \textbf{Menos sensores} se movem com incrementos quantificáveis, desde que com torque especificado, podendo ter conhecimento da posição do eixo.
+		\item \textbf{Posição de repouso:} é possível manter o eixo estacionário, desde que seu torque seja respeitado. 
+	\end{itemize}
+	
+	\subsection{Características construtivas gerais do HSM}
+	
+	Conforme citado anteriormente, o HSM contêm características importantes do VRM e do PMM, o que justifica a denominação 'híbrido'. O estator de um HSM é exatamente um estator do PMM, enquanto que o rotor de um HSM é um rotor do VRM magnetizado.
+	
+	Como forma de visualizar melhor as duas partes do motor, a Fig. \ref{HSMreal} apresenta o estator e o rotor de um HSM genérico aberto. As especificações deste motor são bem semelhantes ao motor apresentado na Fig. \ref{HSMgrafico}.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=.45]{Images/hsmreal1.png}
+		\caption{Principais partes de um HSM genérico - Visão geral \cite{ieeeRusso}}
+		\label{HSMreal}
+	\end{figure} 
+	
+	O estator de um motor de passo híbrido é composto por um dado número de polos magnéticos relacionados com o número de enrolamentos nele, exatamente como em um PMM. Essa característica é herdada dos motores de imã permanente. No PMM, admite-se que para melhorar a resolução de passo, basta adicionar mais enrolamentos ou adicionar mais pares de polos no rotor, através do campo magnético produzido nos enrolamentos deste estator. 
+	
+	O rotor de um motor de passo híbrido é cuidadosamente seccionado, criando pequenas lacunas chamadas dentes (\textit{teeth}) para gerar uma compensação (\textit{offset}) com relação ao estator para o rotor executar a rotação. É importante citar que o rotor de um HSM é magnetizado, diferentemente do rotor de um VRM.
+	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=.4]{Images/hsmreal2.png}
+		\caption{Estator (à esquerda) e rotor (à direita) de um HSM genérico \cite{ieeeRusso}}
+		\label{HSMestatorrotor}
+	\end{figure} 
+	
+	Verifica-se pela Fig. \ref{HSMestatorrotor} que o estator também é seccionado com alguns dentes. A razão do estator também possuir esses dentes é com o propósito de fazer o motor operar, o que será explanado a seguir.
+	
+	\subsection{Funcionamento do motor de passo híbrido}
+	
+	%PARTE QUE O BONOTTO SE RESPONSABILIZA EM TERMINAR :)
