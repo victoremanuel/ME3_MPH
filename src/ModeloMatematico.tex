@@ -130,14 +130,21 @@ O bloco representando o motor oferecer 5 sinais de saída sendo eles:
 
 Os parâmetros usados no modelo de motor de passo são usualmente obtidos na folha de dados do fabricante. No caso onde os parâmetros não estão disponíveis, pode ser determinado através de medidas experimentais.
 
-Os parâmetros encontrados na folha de dados são geralmente: números de fases, torque de rotor travado (\textit{holding torque), angulo de passo, tensão de fase, resistencia do enrolamento($R_a$), maxima indutância($L_1^{max},\ para\ \theta=0$), indutância média ($L_0$) e inércia do motor ($J$).
+Os parâmetros encontrados na folha de dados são geralmente: números de fases, torque de rotor travado (\textit{holding torque}), angulo de passo, tensão de fase, resistência do enrolamento($R_a$), máxima indutância($L_1^{max},\ para\ \theta=0$), indutância média ($L_0$) e inércia do motor ($J$).
 
-O máximo torque de retenção($T_d^{max}$) não é especificado. Este parâmetro pode assume-se ser entre $1\%-10\%$ do torque máximo de rotor travado.
+O máximo torque de retenção($T_d^{max}$) não é especificado. Este parâmetro pode  ser considerado entre $1\%-10\%$ do torque máximo de rotor travado. O máximo fluxo concatenado ($\psi_m$) não é sempre especificado. Este parâmetro pode ser obtido de forma experimental pelo acionamento do motor a uma velocidade constante $N$ (rpm)e medindo em circuito aberto a máxima tensão de enrolamento $E_f$ (V).
+
+O parâmetro $\psi_m$ é computacionalmente obtido pela equação (\ref{eq:eq11a}).
+
+\begin{eqnarray}
+\label{eq:eq11a}
+\psi_m = \left(\frac{30}{P \pi}\right) \left(\frac{E_f}{N}\right)
+\end{eqnarray}
+
+onde $P$ é o número de pares de pólos dado por $P = \frac{360}{2mpasso}$. Aqui $m$= número de fases , $passo$ = ângulo do passo em graus.
 
 
-
-
-
+\subsection{Curva de Torque $vs$ Velocidade}
 As características relacionadas com motores que estão em movimento ou preste a começar são chamadas de características dinâmicas.
 
 A característica \textbf{pull-in} de torque chamada alternativamente de \textbf{característica de partida} e refere-se ao intervalo do torque de carregamento o qual o motor pode partir e parar sem perder sincronismo para várias frequências de acionamento.
