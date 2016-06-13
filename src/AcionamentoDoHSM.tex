@@ -2,7 +2,7 @@ O acionamento de um HSM pode ser realizado de diferentes formas para uma mesma c
 
 \subsection{Motores de Passo Unipolar e Bipolar}
 
-Geralmente motores de passo possuem duas fases, devido principalmente a padronização dos dispositivos drives necessários para o acionamento. Logo normalmente se tem acesso apenas aos 2 terminais de cada fase. Outro ponto importante é que existem dois tipos de acionamento de polos; o acionamento unipolar e o bipolar.  
+Segundo BRITES\cite{PETele}, geralmente motores de passo possuem duas fases, devido principalmente a padronização dos dispositivos drives necessários para o acionamento. Logo normalmente se tem acesso apenas aos 2 terminais de cada fase. Outro ponto importante é que existem dois tipos de acionamento de polos; o acionamento unipolar e o bipolar.  
 
 Nos motores de passo unipolar há dois enrolamentos por fase, que possuem um contato em comum, conhecido como \emph{center-tape}. Tal contato em comum pode ser usado para se colocar outras bobinas em paralelo, aumentando o numero de bobinas ativadas por passo. Porém seu principal função é servir de ponto de alimentação do motor, de modo que para controlar a corrente pelas espiras se faz necessário penas aterrar um ou os dois terminas. A figura \ref{fig:MotorDePassoUnipolar} apresenta o diagrama de um motor de passo unipolar. 
 
@@ -15,7 +15,7 @@ Nos motores de passo unipolar há dois enrolamentos por fase, que possuem um con
 
 Em relação aos terminas \emph{center-tape}, ou T como mostrado na figura \ref{fig:MotorDePassoUnipolar}, existem algumas variações de ligação onde se interliga os terminas T de modo a ficar disponível apenas 5 terminais na máquina, ou ainda onde se usa inúmeras fases todas com os terminais T curto-circuitados.   
 
-Os motores bipolares possuem apenas uma bobina por fase, de modo que para controlar a corrente pelas espiras se faz necessário o uso de circuitos mais complexos que possam inverter a alimentação das bobinas. A grande vantagem deste tipo de motor é o maior torque em relação ao motor unipolar. A figura \ref{fig:MotorDePassoBipolar} apresenta o diagrama de um motor de passo bipolar.
+Os motores bipolares basicamente não possuem o \emph{center-tape}, logo há apenas uma bobina por fase, de modo que para controlar a corrente pelas espiras se faz necessário o uso de circuitos mais complexos que possam inverter a alimentação das bobinas. A grande vantagem deste tipo de motor é o maior torque em relação ao motor unipolar. A figura \ref{fig:MotorDePassoBipolar} apresenta o diagrama de um motor de passo bipolar.
 
 \begin{figure}[H]
 	\centering
@@ -26,3 +26,19 @@ Os motores bipolares possuem apenas uma bobina por fase, de modo que para contro
 
 
 \subsection{Modos de Acionamento} 
+
+O acionamento de um motor de passo é realizado através da energização uma certa quantidade de bobinas de forma sequencial e repetida de acordo com o tipo de passo a se realizar. Existem três tipos de acionamento de bobinas para motores bipolares, e dois tipos de acionamento para bobinas unipolares. Cada tipo de acionamento requer uma configuração diferente de ligação entre bobinas.
+
+\begin{table}[H]
+	\centering
+	\caption{Tipos de Acionamento Para Motores Unipolares}
+	\label{Table:AcionamentoUnipolar}
+	\begin{tabular}{cccc}
+		\multicolumn{4}{c}{Wave Drive}  \\
+		\includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Unipolar/WaveDrive/WaveDriveI.png}& \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Unipolar/WaveDrive/WaveDriveII.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Unipolar/WaveDrive/WaveDriveIII.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Unipolar/WaveDrive/WaveDriveIV.png} \\
+		\multicolumn{4}{c}{Full Drive}  \\
+		&  &  &  \\
+		\multicolumn{4}{c}{Half Drive} \\
+		&  &  &  \\
+	\end{tabular}
+\end{table} 
