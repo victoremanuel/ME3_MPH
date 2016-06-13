@@ -27,9 +27,9 @@ Os motores bipolares basicamente não possuem o \emph{center-tape}, logo há ape
 
 \subsection{Modos de Acionamento} 
 
-O acionamento de um motor de passo é realizado através da energização uma certa quantidade de bobinas de forma sequencial e repetida de acordo com o tipo de passo a se realizar. Existem três tipos de acionamento de bobinas para motores unipolares, e apenas um tipo de acionamento para motores bipolares. Cada tipo de acionamento requer uma configuração diferente de ligação entre bobinas.
+O acionamento de um motor de passo é realizado através da energização uma certa quantidade de bobinas de forma sequencial e repetida de acordo com o tipo de passo a se realizar. Existem três tipos de acionamento de bobinas para motores unipolares, e apenas dois tipos de acionamento para motores bipolares. Cada tipo de acionamento requer uma configuração diferente de ligação entre bobinas.
 
-A tabela \ref{Table:AcionamentoUnipolar} apresenta os três tipos de acionamento para motores unipolares. É importante salientar aqui que  para qualquer motor Unipolar independente do numero de fases se faz necessário, para qualquer tipo de acionamento apresentado, ter acesso a dois terminais cada fase e a apenas um terminal para o \emph{center-tape}, sendo este a alimentação do motor. Para inverter o sentido de giro do rotor seria necessário apenas inverter a alimentação no \emph{center-tape}, simplificando assim o circuito drive. 
+A tabela \ref{Table:AcionamentoUnipolar} apresenta os três tipos de acionamento para motores unipolares. É importante salientar aqui que  para qualquer motor Unipolar independente do numero de fases se faz necessário, para qualquer tipo de acionamento apresentado, ter acesso a dois terminais cada fase e a apenas um terminal para o \emph{center-tape}, sendo este a alimentação do motor. Para inverter o sentido de giro do rotor seria necessário apenas inverter a alimentação no \emph{center-tape}, simplificando assim o circuito \emph{Driver}. 
 
 \begin{table}[H]
 	\centering
@@ -54,7 +54,7 @@ A tabela \ref{Table:AcionamentoUnipolar} apresenta os três tipos de acionamento
 \end{table}
 
 
-A tabela \ref{Table:AcionamentoBipolar} apresenta apenas o método de acionamento \emph{Wave Drive Bipolar}. Neste método de acionamento se faz necessário apenas 2 terminais para cada fase. Porém a grande desvantagem deste método de acionamento é a necessidade de um circuito capaz de inverter a corrente em cada uma das bobinas para que se possa girar o rotor em sentido contrario, se fazendo necessário em um circuito driver mais complexo. 
+A tabela \ref{Table:AcionamentoBipolar} apresenta os método de acionamento para motores bipolares. Nestes métodos de acionamento se faz necessário apenas 2 terminais para cada fase. Porém a grande desvantagem destes métodos de acionamento é a necessidade de um circuito capaz de inverter a corrente em cada uma das bobinas para que se possa girar o rotor em sentido contrario, se fazendo necessário em um circuito \emph{Driver} mais complexo. 
 
 \begin{table}[H]
 	\centering
@@ -65,6 +65,10 @@ A tabela \ref{Table:AcionamentoBipolar} apresenta apenas o método de acionament
 		\multicolumn{4}{|c|}{Wave Drive Bipolar}  \\
 		\hline
 		\includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/WaveDrive/WaveDriveI.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/WaveDrive/WaveDriveII.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/WaveDrive/WaveDriveIII.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/WaveDrive/WaveDriveIV.png} \\
+		\hline
+		\multicolumn{4}{|c|}{Full Drive Bipolar}  \\
+		\hline
+		\includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/FullDrive/FullDriveI.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/FullDrive/FullDriveII.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/FullDrive/FullDriveIII.png} & \includegraphics[width = 0.15\columnwidth]{Images/AcionamentoDoHSM/Bipolar/FullDrive/FullDriveIV.png} \\
 		\hline
 	\end{tabular}
 \end{table} 
