@@ -1,5 +1,5 @@
 
-O motor de passo híbrido pode ser analisado de forma linear e não-linear. É apresentado o modelo dinâmico de acordo com a figura \ref{fig:fig1} por apresentar características em regime transitório e estacionário . O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
+O motor de passo híbrido pode ser analisado através do modelo dinâmico de acordo com a figura \ref{fig:fig1} por apresentar respostas das características em regime transitório e estacionário. O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
 
 \begin{figure}[H]
 	\centering
@@ -15,11 +15,13 @@ No modelo, $R_a$ e $L_a(\theta)$ representa respectivamente a resistência e a i
 	L_a(\theta) = L_0 + L_1\cos(\rho \theta)
 \end{eqnarray}
 
-onde $L_0$ é a indutância média, $L_1$ é a variação máxima da indutância e $\rho$ é o número de dentes do rotor.
+onde $L_0$ é a indutância média, $L_1$ é indutância variável  e $\rho$ é o número de dentes do rotor.
 
-Note que a posição de referência ($\theta = 0$), é quando o dente do rotor esta completamente alinhado com o polo do eixo A, então o enrolamento da fase A terá a indutância máxima.
+Note que a posição de referência ($\theta = 0$), é quando o dente do rotor esta completamente alinhado com o polo do eixo A, então o enrolamento da fase A terá a indutância máxima ($L_1^{max}$).
 
-Este modelo $R_a$ e $L_a$ representa respectivamente a resistência e indutância da fase A. Devido ao tamanho do entreferro, a indução dos enrolamentos do motor de passo híbrido pode ser considerado independente da posição do rotor. No caso de um motor de duas fases a tensão $E_a$ representa a FEM induzida na bobina A é uma função senoidal da posição do rotor
+Este modelo $R_a$ e $L_a$ representa respectivamente a resistência e indutância da fase A. Devido ao tamanho do entreferro, a indução dos enrolamentos do motor de passo híbrido pode ser considerado independente da posição do rotor. 
+
+No caso de um motor de duas fases a tensão $E_a$ representa a FEM induzida na bobina A é uma função senoidal da posição do rotor
 
 \begin{eqnarray}
 	\label{eq:eq2a}
@@ -47,7 +49,7 @@ No caso de duas fases do estator, $\lambda = \frac{\pi}{2}$ e a equação de $E_
 		E_b = \omega \rho \psi_m \cos(\rho \theta )
 \end{eqnarray}
 
-De acordo com a análise da figura \ref{fig:fig1} e as equações (\ref{eq:eq1a}), (\ref{eq:eq2a}) e (\ref{eq:eq4a}), as equações das correntes são na forma de
+De acordo com a análise da figura \ref{fig:fig1} e as equações (\ref{eq:eq1a}), (\ref{eq:eq2a}) e (\ref{eq:eq4a}), as equações das correntes são apresentada como
 
 \begin{eqnarray}
 	\label{eq:eq5a}
@@ -63,7 +65,7 @@ onde
 	\item $i_A,\ i_B$ - correntes de fase;\\
 \end{itemize}
 
-O torque eletromagnético é formado pelas componentes do torque gerado referente a cada fase como segue nas equações (\ref{eq:eq6a}), (\ref{eq:eq6b})
+O torque eletromagnético ($T_e$) é formado pelas componentes do torque gerado referente a cada fase como segue nas equações (\ref{eq:eq6a}), (\ref{eq:eq6b})
 \begin{eqnarray}
 \label{eq:eq6a}
 T_A = i_A \rho \psi_m \sin(\rho \theta)\\
@@ -71,21 +73,21 @@ T_A = i_A \rho \psi_m \sin(\rho \theta)\\
 T_B = i_B \rho \psi_m \cos(\rho \theta) 
 \end{eqnarray}
 
-Se o estator e o rotor tem dentes, o torque eletromagnético é complementado pela componente de torque devido a relutância gerado pela saliências do endentamento, chamado de torque de retenção (\textit{detent torque}) ou torque endentação, $T_d$ possui a equação (\ref{eq:eq7a})
+Se o estator e o rotor tem dentes, o torque eletromagnético é complementado pela componente de torque devido a relutância gerado pela saliências do endentamento, chamado de torque de retenção (\textit{detent torque}) ou torque endentação ($T_d$), possui a equação (\ref{eq:eq7a})
 
 \begin{eqnarray}
 \label{eq:eq7a}
 T_d = T_{d}^{max}\sin(2 \rho \theta)
 \end{eqnarray}
 
-O torque eletromagnético produzido por motor de passo híbrido de duas fases é igual ao somatório resultante da interação entre as correntes das duas fases além do fluxo magnético formado pelos ímãs juntamente com o torque de endentação
+O torque eletromagnético produzido por motor de passo híbrido de duas fases é igual ao somatório resultante da interação entre as correntes das duas fases além do fluxo magnético formado pelos ímãs juntamente com o torque de endentação como demonstra a equação (\ref{eq:eq8a}).
 
 \begin{eqnarray}
 	\label{eq:eq8a}
 	T_e = - \rho \psi_m i_A \sin(\rho \theta) - \rho \psi_m i_B \cos(\rho \theta ) - T_d
 \end{eqnarray}
 
-O movimento do rotor é descrito pela equação (\ref{eq:eq9a}) de rotação do movimento, o que leva em conta a soma de inércia do rotor, torque de carga, torque eletromagnético e o torque de atrito viscoso.
+O movimento do rotor é descrito pela equação (\ref{eq:eq9a}) de rotação do movimento, o que leva em conta a soma da inércia, torque de carga, torque eletromagnético e o torque de atrito viscoso.
 
 \begin{eqnarray}
 \label{eq:eq9a}
@@ -118,7 +120,7 @@ Com as equações definidas, utiliza-se o modelo de espaço de estados para a re
 	\label{fig:fig2}
 \end{figure}
 
-O bloco representando o motor oferecer 5 sinais de saída sendo eles:
+O bloco representando o motor oferece 5 sinais de saída sendo eles:
 
 \begin{itemize}
 	\item Tensão de fase ($V_f$);
@@ -145,13 +147,24 @@ onde $P$ é o número de pares de pólos dado por $P = \frac{360}{2mpasso}$. Aqu
 
 
 \subsection{Curva de Torque $vs$ Velocidade}
-As características relacionadas com motores que estão em movimento ou preste a começar são chamadas de características dinâmicas.
+A característica de torque versus velocidade é chave para selecionar adequadamente o motor, método de acionamento para uma aplicação específica. Esta características são dependente do motor, do modo de excitação e do tipo de driver ou método de acionamento. Para melhor entender a curva é útil definirmos os diferentes aspectos da curva representado na figura \ref{fig:fig3}.
 
-A característica \textbf{pull-in} de torque chamada alternativamente de \textbf{característica de partida} e refere-se ao intervalo do torque de carregamento o qual o motor pode partir e parar sem perder sincronismo para várias frequências de acionamento.
-A característica \textbf{pull-out} de torque chamada alternativamente de \textbf{característica de taxa de variação de carga}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.60]{Images/curvatorquevelocidade_HSM.PNG}
+	\caption{ Curva ideal de Torque \textit{versus} Velocidade do motor de passo }
+	\label{fig:fig3}
+\end{figure}
+Torque de arranque (\textit{holding torque}), é o máximo torque produzido quando o moor está parado.
 
-Após a partida do motor por um driver especificando o modo de excitação delimitado por sua gama de valores de partida, a frequência de pulso é aumentada gradualmente. O motor inicialmente ficará sem sincronismo. A relação entre o torque de carga e o máximo pulso de frequência com qual o motor pode sincronizar é chamado de característica pull-out. A curva pull-out é afetado pelo circuito driver, acoplamento, instrumentos de medição e outras condições.
+Curva de partida (\textit{pull-in curve}), é define uma área referida como região de partida e parada do motor de passo. A curva demonstrada a máxima frequência a qual o motor pode iniciar e parar instantaneamente com uma carga aplicada sem perda de sincronismo.
 
-Vejamos algumas características:
+Máxima frequência de partida (\textit{maximum start rate}), como o próprio nome diz, é a máxima frequência de partida do motor sem carga aplicado ao eixo.
 
-\textbf{Máxima Frequência de Partida}: é definido como a máxima frequência de controle no qual o motor sem cargapode iniciar e parar sem perder passos.
+Curva de Carga (\textit{pull-out curve}) define uma área referido como região de operação (\textit{slew region}). Esta curva fornece a frequência máxima com que o motor pode operar sem perder o sincronismo. O motor deve operar dentro desta região (\textit{slew region}) para seu correto funcionamento 
+
+Máxima frequência de operação (\textit{maximun slew rate}), é a máxima frequência de operação do motor sem carga aplicada.
+
+As características da curva de carga (\textit{pull-out curve}) varia também de acordo com a carga. Quanto maior a inércia da carga, menor será a área da curva de partida. Podemos ver a partir do formato da curva que a velocidade afeta a capacidade de torque de saída, diminuindo a medida que a velocidade aumenta. Isto ocorre pois em altas velocidades o circuito tem caráter predominantemente indutivo.
+
+
