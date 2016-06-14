@@ -1,0 +1,23 @@
+Minhas Referências
+
+The Hybrid Stepper Motor Modeling in Simulink
+Dmitry Samokhvalov PhD, IEEE Member, Sergei Stoliarov IEEE Student Member,
+Andrey Kekkonen
+Saint-Petersburg Electrotechnical university "LETI" Department of Robotics and Industrial Automation
+dmitry.samokvalov@gmail.com
+serj.stolyarov@gmail.com
+mias812@yandex.ru
+
+978-1-4799-7306-4/15/$3l.00 2015 IEEE
+
+
+Site da Mathworks
+
+http://www.mathworks.com/help/physmod/sps/powersys/ref/steppermotor.html
+
+Stepper Motor
+
+
+(Arquivo motrobas)
+Industrial Circuits Application Note
+Stepper Motor Basics
