@@ -1,5 +1,5 @@
 
-O motor de passo híbrido pode ser analisado através do modelo dinâmico de acordo com a figura \ref{fig:fig1} por apresentar respostas das características em regime transitório e estacionário. O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
+O motor de passo híbrido pode ser analisado através do modelo dinâmico de acordo com a Figura \ref{fig:fig1} por apresentar respostas das características em regime transitório e estacionário. O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
 
 \begin{figure}[H]
 	\centering
@@ -96,7 +96,7 @@ j\frac{d\omega(t)}{dt} = T_e(t) - T_L - B\omega(t)
 
 Substituindo a equação (\ref{eq:eq8a}) em (\ref{eq:eq9a}) obtemos a equação (\ref{eq:eq10a}).
 
-\tiny
+\scriptsize
 
 \begin{eqnarray}
 \label{eq:eq10a}
@@ -134,7 +134,7 @@ Os parâmetros usados no modelo de motor de passo são usualmente obtidos na fol
 
 Os parâmetros encontrados na folha de dados são geralmente: números de fases, torque de rotor travado (\textit{holding torque}), angulo de passo, tensão de fase, resistência do enrolamento($R_a$), máxima indutância($L_1^{max},\ para\ \theta=0$), indutância média ($L_0$) e inércia do motor ($J$).
 
-O máximo torque de retenção($T_d^{max}$) não é especificado. Este parâmetro pode  ser considerado entre $1\%-10\%$ do torque máximo de rotor travado. O máximo fluxo concatenado ($\psi_m$) não é sempre especificado. Este parâmetro pode ser obtido de forma experimental pelo acionamento do motor a uma velocidade constante $N$ (rpm)e medindo em circuito aberto a máxima tensão de enrolamento $E_f$ (V).
+O máximo torque de retenção($T_d^{max}$) não é especificado. Este parâmetro pode  ser considerado entre $1\%-10\%$ do torque máximo de rotor travado. O máximo fluxo concatenado ($\psi_m$) não é sempre especificado. Este parâmetro pode ser obtido de forma experimental pelo acionamento do motor a uma velocidade constante $N$ [rpm] e medindo em circuito aberto a máxima tensão de enrolamento $E_f$ (V).
 
 O parâmetro $\psi_m$ é computacionalmente obtido pela equação (\ref{eq:eq11a}).
 
@@ -163,7 +163,7 @@ Máxima frequência de partida (\textit{maximum start rate}), como o próprio no
 
 Curva de Carga (\textit{pull-out curve}) define uma área referido como região de operação (\textit{slew region}). Esta curva fornece a frequência máxima com que o motor pode operar sem perder o sincronismo. O motor deve operar dentro desta região (\textit{slew region}) para seu correto funcionamento 
 
-Máxima frequência de operação (\textit{maximun slew rate}), é a máxima frequência de operação do motor sem carga aplicada.
+Máxima frequência de operação (\textit{maximum slew rate}), é a máxima frequência de operação do motor sem carga aplicada.
 
 As características da curva de carga (\textit{pull-out curve}) varia também de acordo com a carga. Quanto maior a inércia da carga, menor será a área da curva de partida. Podemos ver a partir do formato da curva que a velocidade afeta a capacidade de torque de saída, diminuindo a medida que a velocidade aumenta. Isto ocorre pois em altas velocidades o circuito tem caráter predominantemente indutivo.
 
