@@ -1,7 +1,7 @@
-Como explanado anteriormente, o motor de passo híbrido congrega características do motor de passo de ímã permanente e o motor de passo de relutância variável. Para entender como o motor de passo híbrido funciona, primeiramente irá ser mostrado brevemente o princípio de funcionamento destes dois outros tipos de motores de passo ora citados, bem como o que são motores de passo, por fim será explicado o funcionamento do motor de passo híbrido em função como um motor aperfeiçoado dos outros dois motores de passo, a fim da explicação se tornar mais familiarizada para o leitor.  
+Como explanado anteriormente, o motor de passo híbrido congrega características do motor de passo de ímã permanente e o motor de passo de relutância variável. Para entender como o motor de passo híbrido funciona, primeiramente irá ser mostrado brevemente o princípio de funcionamento destes dois outros tipos de motores de passo ora citados, bem como o que são motores de passo, por fim será explicado o funcionamento do motor de passo híbrido como um motor aperfeiçoado derivado dos outros dois motores de passo.  
 
 	\subsection{Motor de passo genérico}
-	São máquinas elétricas que consistem em um estator com enrolamentos de excitação e um rotor magnético com saliências. Neles o conjugado é produzido pela tendência do rotor a se alinhar com a onda de fluxo produzida pelo estator, de modo a maximizar os fluxos concatenados que resultam da aplicação de uma dada corrente no estator. No motor de passo as fases dos enrolamentos do estator são excitadas sequencialmente, fazendo o rotor girar na forma de uma sequência de passos, com ângulos definidos a cada passo, devido à tendência de alinhamento do rotor com a onda de fluxo do estator. \cite{Fitz} As principais características dos motores de passo são \cite{MoonsHSM}:
+	São máquinas elétricas que consistem em um estator com enrolamentos de excitação e um rotor magnético com saliências. Segundo FITZGERALD et al \cite{Fitz}, neles o conjugado é produzido pela tendência do rotor a se alinhar com a onda de fluxo produzida pelo estator, de modo a maximizar os fluxos concatenados que resultam da aplicação de uma dada corrente no estator. No motor de passo as fases dos enrolamentos do estator são excitadas sequencialmente, fazendo o rotor girar na forma de uma sequência de passos, com ângulos definidos a cada passo, devido à tendência de alinhamento do rotor com a onda de fluxo do estator. \cite{Fitz} As principais características dos motores de passo são: \cite{MoonsHSM}
 	
 	\begin{itemize}
 		\item \textbf{Inexistência de escovas:} não necessitam de escovas, reduzindo a maioria das falhas comumente encontradas nos outros motores elétricos, como faiscamento e perdas ôhmicas no rotor e escovas.
@@ -19,7 +19,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=.45]{Images/hsmreal1.png}
-		\caption{Principais partes de um HSM genérico - Visão geral \cite{ieeeRusso}}
+		\caption{Principais partes de um HSM genérico - Visão geral. \cite{ieeeRusso}}
 		\label{HSMreal}
 	\end{figure} 
 	
@@ -30,7 +30,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=.4]{Images/hsmreal2.png}
-		\caption{Estator (à esquerda) e rotor (à direita) de um HSM genérico \cite{ieeeRusso}}
+		\caption{Estator (à esquerda) e rotor (à direita) de um HSM genérico. \cite{ieeeRusso}}
 		\label{HSMestatorrotor}
 	\end{figure} 
 	
@@ -43,7 +43,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.45]{images/hsm_operation/hsmrotorreal}
-		\caption{Rotor seccionado em seção sul (S) e seção norte (N) \cite{ieeeRusso}}
+		\caption{Rotor seccionado em seção sul (S) e seção norte (N). \cite{ieeeRusso}}
 		\label{rotorsec}
 	\end{figure}
 	
@@ -52,7 +52,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.2]{images/hsm_operation/rotormag1}
-		\caption{Material ferromagnético do rotor simplificado de um HSM (Sem dentes)}
+		\caption{Material ferromagnético do rotor simplificado de um HSM (Sem dentes).}
 		\label{rotor1}
 	\end{figure}
 	
@@ -61,18 +61,18 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.2]{images/hsm_operation/rotormag2}
-		\caption{Rotor simplificado de um HSM (Com dentes)}
+		\caption{Rotor simplificado de um HSM (Com dentes).}
 		\label{rotor2}
 	\end{figure}
 	
-	O número de dentes também determina a resolução do passo: \emph{quanto mais dentes, menor a resolução}.
+	O número de dentes também determina a resolução do passo: \emph{quanto mais dentes, maior a resolução}.
 	
-	De acordo com a Fig. \ref{rotor3}, verifica-se que os dentes de cada seção polar são espaçados com uma certa compensação devido a alinhação dos dentes. 
+	De acordo com a Fig. \ref{rotor3}, verifica-se que os dentes de cada seção polar são espaçados com uma certa compensação devido a alinhamento dos dentes. 
 	
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.3]{images/hsm_operation/rotormag3}
-		\caption{Visão superior do rotor de um HSM}
+		\caption{Visão superior do rotor de um HSM.}
 		\label{rotor3}
 	\end{figure}
 	
@@ -81,7 +81,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.2]{images/hsm_operation/rotormag4}
-		\caption{Visão superior do espaçamento entre os dentes das seções do rotor}
+		\caption{Visão superior do espaçamento entre os dentes das seções do rotor.}
 		\label{rotor4}
 	\end{figure}
 	
@@ -90,7 +90,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	 \begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.3]{images/hsm_operation/etapa1}
-		\caption{Visão superior de um HSM, com estator e rotor em destaque}
+		\caption{Visão superior de um HSM, com estator e rotor em destaque.}
 		\label{hsm_superior}
 	\end{figure}
 	
@@ -101,7 +101,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.16]{images/hsm_operation/visaopasso1}
-		\caption{Estator e rotor antes do acionamento das bobinas de uma fase}
+		\caption{Estator e rotor antes do acionamento das bobinas de uma fase.}
 		\label{passo1}
 	\end{figure}
 	
@@ -110,7 +110,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.3]{images/hsm_operation/etapa3}
-		\caption{Estator e rotor do HSM ao acionar uma das fases (núcleos do estator magnetizados horizontalmente)}
+		\caption{Estator e rotor do HSM ao acionar uma das fases (núcleos do estator magnetizados horizontalmente).}
 		\label{acionamento1}
 	\end{figure}
 	
@@ -121,7 +121,7 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	\begin{figure}[H]
 		\centering 
 		\includegraphics[scale=0.16]{images/hsm_operation/visaopasso2}
-		\caption{Estator e rotor de um HSM ao acionar uma das fases}
+		\caption{Estator e rotor de um HSM ao acionar uma das fases.}
 		\label{passo2}
 	\end{figure}
 	
@@ -133,8 +133,8 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	
 	\begin{figure}[H]
 		\centering 
-		\includegraphics[scale=0.16]{images/hsm_operation/visaopasso3}
-		\caption{Movimentação do rotor devido a magnetização do estator}
+		\includegraphics[scale=0.13]{images/hsm_operation/visaopasso3}
+		\caption{Movimentação do rotor devido a magnetização do estator.}
 		\label{passo3}
 	\end{figure}  
 	
@@ -142,10 +142,10 @@ Como explanado anteriormente, o motor de passo híbrido congrega característica
 	
 	\begin{figure}[H]
 		\centering 
-		\includegraphics[scale=0.3]{images/hsm_operation/etapa2}
-		\caption{Estator e rotor do HSM ao acionar outra fase (núcleos do estator magnetizados verticalmente)}
+		\includegraphics[scale=0.25]{images/hsm_operation/etapa2}
+		\caption{Estator e rotor do HSM ao acionar outra fase (núcleos do estator magnetizados verticalmente).}
 		\label{acionamento2}
 	\end{figure}
 	
-	Repetindo o mesmo procedimento, o motor continuará executando os passos com a angulação determinada pela sequência e forma de acionamento das bobinas. Para \textbf{inverter o sentido de rotação do rotor}, basta inverter o sentido da corrente elétrica que flui pela fase, consequentemente pelos enrolamentos, e magnetizará o núcleo do estator que suporta os enrolamentos, como foi explanado durante toda esta seção do trabalho. 
+	Repetindo o mesmo procedimento, o motor continuará executando os passos com a angulação determinada pela sequência e forma de acionamento das bobinas. Para \textbf{inverter o sentido de rotação do rotor}, basta inverter o sentido da corrente elétrica que flui pela fase, consequentemente pelos enrolamentos, e magnetizará o núcleo do estator que suporta os enrolamentos. 
 	

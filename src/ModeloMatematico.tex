@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 O motor de passo híbrido pode ser analisado através do modelo dinâmico de acordo com a Figura \ref{fig:fig1} por apresentar respostas das características em regime transitório e estacionário. O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
+=======
+O motor de passo híbrido pode ser analisado através do modelo dinâmico de acordo com a Fig. \ref{fig:fig1} por apresentar respostas das características em regime transitório e estacionário. O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
+>>>>>>> origin/master
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=.42]{Images/graficofasea.PNG}
-	\caption{ Circuito equivalente da bobina A}
+	\includegraphics[width = .8\columnwidth]{Images/graficofasea.PNG}
+	\caption{ Circuito equivalente da bobina A.}
 	\label{fig:fig1}
 \end{figure}
 
@@ -15,41 +19,49 @@ No modelo, $R_a$ e $L_a(\theta)$ representa respectivamente a resistência e a i
 	L_a(\theta) = L_0 + L_1\cos(\rho \theta)
 \end{eqnarray}
 
-onde $L_0$ é a indutância média, $L_1$ é indutância variável  e $\rho$ é o número de dentes do rotor.
+Onde:
 
-Note que a posição de referência ($\theta = 0$), é quando o dente do rotor esta completamente alinhado com o polo do eixo A, então o enrolamento da fase A terá a indutância máxima ($L_1^{max}$).
+\begin{itemize}
+	 \item $L_0$ - indutância média,
+	 \item $L_1$ - indutância variável,
+	 \item $\rho$ - número de dentes do rotor.
+\end{itemize}
+
+
+Note que a posição de referência ($\theta = 0$), é quando o dente do rotor está completamente alinhado com o polo do eixo A, então o enrolamento da fase A terá a indutância máxima ($L_1^{max}$).
 
 Este modelo $R_a$ e $L_a$ representa respectivamente a resistência e indutância da fase A. Devido ao tamanho do entreferro, a indução dos enrolamentos do motor de passo híbrido pode ser considerado independente da posição do rotor. 
 
-No caso de um motor de duas fases a tensão $E_a$ representa a FEM induzida na bobina A é uma função senoidal da posição do rotor
+No caso de um motor de duas fases a tensão $E_a$ representa a FEM induzida na bobina A. Sendo uma função senoidal da posição do rotor
 
 \begin{eqnarray}
 	\label{eq:eq2a}
 	E_a = \omega \rho \psi_m \sin(\rho \theta)
 \end{eqnarray}
 
-similar a FEM induzida pela bobina B, que é dado por
+similar a FEM induzida pela bobina B, que é dado por:
 
 \begin{eqnarray}
 		\label{eq:eq3a}
 		E_b = \omega \rho \psi_m \sin(\rho \theta - \lambda)
 \end{eqnarray}
-onde
+
+onde:
+
 \begin{itemize}
-	\item $\rho$ - número de dentes do rotor; \\
-	\item $\psi_m$ - máximo fluxo concatenado; \\
-	\item $\theta$ - posição angular do rotor; \\
-	\item $\lambda$ - angulo de fase; \\
+	\item $\rho$ - número de dentes do rotor,
+	\item $\psi_m$ - máximo fluxo concatenado, 	\item $\theta$ - posição angular do rotor,
+	\item $\lambda$ - angulo de fase.
 \end{itemize}
 
-No caso de duas fases do estator, $\lambda = \frac{\pi}{2}$ e a equação de $E_b$ é modificado como se segue a equação (\ref{eq:eq4a})
+No caso de duas fases do estator, $\lambda = \frac{\pi}{2}$ e a equação de $E_b$ é modificado como se segue a Equação (\ref{eq:eq4a}).
 
 \begin{eqnarray}
 		\label{eq:eq4a}
 		E_b = \omega \rho \psi_m \cos(\rho \theta )
 \end{eqnarray}
 
-De acordo com a análise da figura \ref{fig:fig1} e as equações (\ref{eq:eq1a}), (\ref{eq:eq2a}) e (\ref{eq:eq4a}), as equações das correntes são apresentada como
+De acordo com a análise da Fig. \ref{fig:fig1} e as Equações (\ref{eq:eq1a}), (\ref{eq:eq2a}) e (\ref{eq:eq4a}), as equações das correntes são apresentada como:
 
 \begin{eqnarray}
 	\label{eq:eq5a}
@@ -58,14 +70,16 @@ De acordo com a análise da figura \ref{fig:fig1} e as equações (\ref{eq:eq1a}
 	\frac{d i_B(t)}{dt} = \frac{1}{L_b}\left(V_B - Ri_B(t) - \omega(t) \rho \psi_m \cos(\rho \theta) \right) 
 \end{eqnarray}
 
-onde
+Onde:
+
 \begin{itemize}
-	\item $V_A,\ V_B$ - tensões de fase; \\
-	\item $R$ - resistência de fase do enrolamento; \\
-	\item $i_A,\ i_B$ - correntes de fase;\\
+	\item $V_A, V_B$ - tensões de fase,
+	\item $R$ - resistência de fase do enrolamento,
+	\item $i_A,\ i_B$ - correntes de fase.
 \end{itemize}
 
-O torque eletromagnético ($T_e$) é formado pelas componentes do torque gerado referente a cada fase como segue nas equações (\ref{eq:eq6a}), (\ref{eq:eq6b})
+O torque eletromagnético ($T_e$) é formado pelas componentes do torque gerado referente a cada fase como segue nas Equações (\ref{eq:eq6a}), (\ref{eq:eq6b}).
+
 \begin{eqnarray}
 \label{eq:eq6a}
 T_A = i_A \rho \psi_m \sin(\rho \theta)\\
@@ -73,49 +87,51 @@ T_A = i_A \rho \psi_m \sin(\rho \theta)\\
 T_B = i_B \rho \psi_m \cos(\rho \theta) 
 \end{eqnarray}
 
-Se o estator e o rotor tem dentes, o torque eletromagnético é complementado pela componente de torque devido a relutância gerado pela saliências do endentamento, chamado de torque de retenção (\textit{detent torque}) ou torque endentação ($T_d$), possui a equação (\ref{eq:eq7a})
+Se o estator e o rotor tem dentes, o torque eletromagnético é complementado pela componente de torque devido a relutância gerado pela saliências do endentamento, chamado de torque de retenção (\textit{detent torque}) ou torque endentação ($T_d$), possui a Equação (\ref{eq:eq7a}).
 
 \begin{eqnarray}
 \label{eq:eq7a}
 T_d = T_{d}^{max}\sin(2 \rho \theta)
 \end{eqnarray}
 
-O torque eletromagnético produzido por motor de passo híbrido de duas fases é igual ao somatório resultante da interação entre as correntes das duas fases além do fluxo magnético formado pelos ímãs juntamente com o torque de endentação como demonstra a equação (\ref{eq:eq8a}).
+O torque eletromagnético produzido por motor de passo híbrido de duas fases é igual ao somatório resultante da interação entre as correntes das duas fases além do fluxo magnético formado pelos ímãs juntamente com o torque de endentação como demonstra a Equação (\ref{eq:eq8a}).
 
 \begin{eqnarray}
 	\label{eq:eq8a}
 	T_e = - \rho \psi_m i_A \sin(\rho \theta) - \rho \psi_m i_B \cos(\rho \theta ) - T_d
 \end{eqnarray}
 
-O movimento do rotor é descrito pela equação (\ref{eq:eq9a}) de rotação do movimento, o que leva em conta a soma da inércia, torque de carga, torque eletromagnético e o torque de atrito viscoso.
+O movimento do rotor é descrito pela Equação (\ref{eq:eq9a}) de rotação do movimento, o que leva em conta a soma da inércia, torque de carga, torque eletromagnético e o torque de atrito viscoso.
 
 \begin{eqnarray}
 \label{eq:eq9a}
 j\frac{d\omega(t)}{dt} = T_e(t) - T_L - B\omega(t)
 \end{eqnarray}
 
+<<<<<<< HEAD
 Substituindo a equação (\ref{eq:eq8a}) em (\ref{eq:eq9a}) obtemos a equação (\ref{eq:eq10a}).
 
 \scriptsize
+=======
+Substituindo a Equação (\ref{eq:eq8a}) em (\ref{eq:eq9a}) obtêm-se a Equação (\ref{eq:eq10a}).
+>>>>>>> origin/master
 
 \begin{eqnarray}
 \label{eq:eq10a}
-j\frac{d\omega(t)}{dt} = - \rho \psi_m i_A \sin(\rho \theta) - \rho \psi_m i_B \cos(\rho \theta ) )- T_{d}^{max}\sin(2 \rho \theta)  - T_L - B\omega(t)
+j\frac{d\omega(t)}{dt} = - \rho \psi_m i_A \sin(\rho \theta) - \rho \psi_m i_B \cos(\rho \theta ) )-\\ \nonumber T_{d}^{max}\sin(2 \rho \theta)  - T_L - B\omega(t)
 \end{eqnarray}
 
 \normalsize
 
 Com as equações definidas, utiliza-se o modelo de espaço de estados para a resolução em tempo contínuo dadas as devidas considerações expostas anteriormente. 
 
-
-
 \subsection{Simulação Computacional}
 
-É possível simular o comportamento do motor por modelo genérico utilizando o $Simulink^\circledR$ conforme apresentado na figura \ref{fig:fig2}.
+É possível simular o comportamento do motor por modelo genérico utilizando o $Simulink^\circledR$ conforme apresentado na Fig. \ref{fig:fig2}.
 
-\begin{figure}[H]
+\begin{figure}[!h]
 	\centering
-	\includegraphics[scale=.42]{Images/modeloEE_HSM.PNG}
+	\includegraphics[width= \columnwidth]{Images/modeloEE_HSM.PNG}
 	\caption{ Modelo Genérico do Motor de Passo Híbrido - $Simulink^{\circledR}$ }
 	\label{fig:fig2}
 \end{figure}
@@ -127,37 +143,45 @@ O bloco representando o motor oferece 5 sinais de saída sendo eles:
 	\item Corrente de fase ($I_f$);
 	\item Torque eletromagnético ($T_e$);
 	\item Velocidade angular do rotor ($\omega$);
-	\item Posição do rotor ($\theta$);
+	\item Posição do rotor ($\theta$).
 \end{itemize}
 
 Os parâmetros usados no modelo de motor de passo são usualmente obtidos na folha de dados do fabricante. No caso onde os parâmetros não estão disponíveis, pode ser determinado através de medidas experimentais.
 
 Os parâmetros encontrados na folha de dados são geralmente: números de fases, torque de rotor travado (\textit{holding torque}), angulo de passo, tensão de fase, resistência do enrolamento($R_a$), máxima indutância($L_1^{max},\ para\ \theta=0$), indutância média ($L_0$) e inércia do motor ($J$).
 
+<<<<<<< HEAD
 O máximo torque de retenção($T_d^{max}$) não é especificado. Este parâmetro pode  ser considerado entre $1\%-10\%$ do torque máximo de rotor travado. O máximo fluxo concatenado ($\psi_m$) não é sempre especificado. Este parâmetro pode ser obtido de forma experimental pelo acionamento do motor a uma velocidade constante $N$ [rpm] e medindo em circuito aberto a máxima tensão de enrolamento $E_f$ (V).
+=======
+O máximo torque de retenção($T_d^{max}$) não é especificado. Este parâmetro pode  ser considerado entre $1\%-10\%$ do torque máximo de rotor travado. O máximo fluxo concatenado ($\psi_m$) não é sempre especificado. Este parâmetro pode ser obtido de forma experimental pelo acionamento do motor a uma velocidade constante $N$ (rpm) e medindo em circuito aberto a máxima tensão de enrolamento $E_f$ (V).
+>>>>>>> origin/master
 
-O parâmetro $\psi_m$ é computacionalmente obtido pela equação (\ref{eq:eq11a}).
+O parâmetro $\psi_m$ é computacionalmente obtido pela Equação (\ref{eq:eq11a}).
 
 \begin{eqnarray}
 \label{eq:eq11a}
 \psi_m = \left(\frac{30}{P \pi}\right) \left(\frac{E_f}{N}\right)
 \end{eqnarray}
 
-onde $P$ é o número de pares de pólos dado por $P = \frac{360}{2mpasso}$. Aqui $m$= número de fases , $passo$ = ângulo do passo em graus.
+Onde:
 
+\begin{itemize}
+	\item $P$ - número de pares de pólos dado por $P = \frac{360}{2mpasso}$. Aqui $m$= número de fases , $passo$ = ângulo do passo em graus.
+\end{itemize}
 
 \subsection{Curva de Torque $vs$ Velocidade}
-A característica de torque versus velocidade é chave para selecionar adequadamente o motor, método de acionamento para uma aplicação específica. Esta características são dependente do motor, do modo de excitação e do tipo de driver ou método de acionamento. Para melhor entender a curva é útil definirmos os diferentes aspectos da curva representado na figura \ref{fig:fig3}.
+A característica de torque versus velocidade é chave para selecionar adequadamente o motor, método de acionamento para uma aplicação específica. Esta características são dependente do motor, do modo de excitação e do tipo de driver ou método de acionamento. Para melhor entender a curva é útil definirmos os diferentes aspectos da curva representado na Fig. \ref{fig:fig3}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=.60]{Images/curvatorquevelocidade_HSM.PNG}
+	\includegraphics[scale=.6]{Images/curvatorquevelocidade_HSM.PNG}
 	\caption{ Curva ideal de Torque \textit{versus} Velocidade do motor de passo }
 	\label{fig:fig3}
 \end{figure}
-Torque de arranque (\textit{holding torque}), é o máximo torque produzido quando o moor está parado.
 
-Curva de partida (\textit{pull-in curve}), é define uma área referida como região de partida e parada do motor de passo. A curva demonstrada a máxima frequência a qual o motor pode iniciar e parar instantaneamente com uma carga aplicada sem perda de sincronismo.
+Torque de arranque (\textit{holding torque}), é o máximo torque produzido quando o motor está parado.
+
+Curva de partida (\textit{pull-in curve}), define uma área referida como região de partida e parada do motor de passo. A curva demonstra a máxima frequência a qual o motor pode iniciar e parar instantaneamente com uma carga aplicada sem perda de sincronismo.
 
 Máxima frequência de partida (\textit{maximum start rate}), como o próprio nome diz, é a máxima frequência de partida do motor sem carga aplicado ao eixo.
 
