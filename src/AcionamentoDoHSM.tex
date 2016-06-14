@@ -2,15 +2,13 @@ O acionamento de um HSM pode ser realizado de diferentes formas para uma mesma c
 
 \subsection{Motores de Passo Unipolar e Bipolar}
 
-<<<<<<< HEAD
 Segundo BRITES\cite{PETele}, ao acionar um motor de passo se deve estar atento a dois pontos importantes. Primeiramente se tem que geralmente motores de passo possuem apenas duas fases, devido principalmente a padronização dos dispositivos drives necessários para o acionamento. O segundo ponto a se considerar é que existem dois tipos de acionamento de polos; o acionamento unipolar e o bipolar.  
 
 Nos motores de passo unipolar há dois enrolamentos por fase, que possuem um contato em comum, conhecido como \emph{center-tape}. Tal contato em comum pode ser usado para conectar outras bobinas em paralelo, aumentando o numero de bobinas ativadas por passo. Porém a principal função do \emph{center-tape} é servir de ponto de alimentação do motor, de modo que para controlar a corrente pelas espiras se faz necessário penas aterrar um ou os dois terminas. A Figura \ref{fig:MotorDePassoUnipolar} apresenta o diagrama de um motor de passo unipolar. 
-=======
+
 Segundo BRITES\cite{PETele}, ao acionar um motor de passo se deve estar atento a dois ponto importantes. Primeiramente, se tem que geralmente motores de passo possuem apenas duas fases, devido principalmente a padronização dos dispositivos drives necessários para o acionamento. O segundo ponto a se considerar é que existem dois tipos de acionamento de polos; o acionamento unipolar e o bipolar.  
 
 Nos motores de passo unipolar há dois enrolamentos por fase, que possuem um contato em comum, conhecido como \emph{center-tape}. Tal contato em comum pode ser usado para conectar outras bobinas em paralelo, aumentando o numero de bobinas ativadas por passo. Porém a principal função do \emph{center-tape} é servir de ponto de alimentação do motor, de modo que para controlar a corrente pelas espiras se faz necessário apenas aterrar um ou os dois terminas. A Fig. \ref{fig:MotorDePassoUnipolar} apresenta o diagrama de um motor de passo unipolar. 
->>>>>>> origin/master
 
 \begin{figure}[H]
 	\centering
@@ -19,15 +17,14 @@ Nos motores de passo unipolar há dois enrolamentos por fase, que possuem um con
 	\label{fig:MotorDePassoUnipolar}
 \end{figure} 
 
-<<<<<<< HEAD
 Em relação aos terminas \emph{center-tape}, ou T como mostrado na Figura \ref{fig:MotorDePassoUnipolar}, existem algumas variações de ligação onde se interliga os terminas T de modo a ficar disponível apenas 5 terminais na máquina, ou ainda onde se usa inúmeras fases todas com os terminais T curto-circuitados.   
 
 Os motores bipolares basicamente não possuem o \emph{center-tape}, logo há apenas uma bobina por fase. A grande vantagem deste tipo de motor é o maior torque em relação ao motor unipolar. A Figura \ref{fig:MotorDePassoBipolar} apresenta o diagrama de um motor de passo bipolar.
-=======
+
 Em relação aos terminas \emph{center-tape}, ou T como mostrado na Fig. \ref{fig:MotorDePassoUnipolar}, existem algumas variações de ligação onde se interliga os terminas T de modo a ficar disponível apenas 5 terminais na máquina, ou ainda onde se usa inúmeras fases todas com os terminais T curto-circuitados.   
 
 Os motores bipolares basicamente não possuem o \emph{center-tape}, logo há apenas uma bobina por fase. A grande vantagem deste tipo de motor é o maior torque em relação ao motor unipolar. A Fig. \ref{fig:MotorDePassoBipolar} apresenta o diagrama de um motor de passo bipolar.
->>>>>>> origin/master
+
 
 \begin{figure}[H]
 	\centering
@@ -41,11 +38,9 @@ Os motores bipolares basicamente não possuem o \emph{center-tape}, logo há ape
 
 O acionamento de um motor de passo é realizado através da energização de uma certa quantidade de bobinas de forma sequencial e repetida de acordo com o tipo de passo a se realizar. Existem três tipos de acionamento de bobinas para motores unipolares, e apenas dois tipos de acionamento para motores bipolares. Cada tipo de acionamento requer uma configuração diferente de ligação entre bobinas.
 
-<<<<<<< HEAD
 A Tabela \ref{Table:AcionamentoUnipolar} apresenta os três tipos de acionamento para motores unipolares. É importante salientar aqui que para qualquer motor Unipolar independente do numero de fases se faz necessário, para qualquer tipo de acionamento apresentado, ter acesso a dois terminais cada fase e a apenas um terminal para o \emph{center-tape}, sendo este a alimentação do motor. Para inverter o sentido de giro do rotor seria necessário apenas inverter a alimentação no \emph{center-tape}, simplificando assim o circuito \emph{Driver}. 
-=======
+
 A Tabela \ref{Table:AcionamentoUnipolar} apresenta os três tipos de acionamento para motores unipolares. É importante salientar aqui que  para qualquer motor unipolar independente do numero de fases se faz necessário, para qualquer tipo de acionamento apresentado, ter acesso a dois terminais cada fase e a apenas um terminal para o \emph{center-tape}, sendo este a alimentação do motor. Para inverter o sentido de giro do rotor seria necessário apenas inverter a alimentação no \emph{center-tape}, simplificando assim o circuito \emph{Driver}. 
->>>>>>> origin/master
 
 \begin{table}[H]
 	\centering
@@ -69,12 +64,9 @@ A Tabela \ref{Table:AcionamentoUnipolar} apresenta os três tipos de acionamento
 	\end{tabular}
 \end{table}
 
-
-<<<<<<< HEAD
 A Tabela \ref{Table:AcionamentoBipolar} apresenta os método de acionamento para motores bipolares. Nestes métodos de acionamento se faz necessário apenas 2 terminais para cada fase. Porém a grande desvantagem destes métodos de acionamento é a necessidade de um circuito capaz de inverter a corrente em cada uma das bobinas para que se possa girar o rotor em sentido contrario, se fazendo necessário em um circuito \emph{Driver} mais complexo. 
-=======
+
 A Tabela \ref{Table:AcionamentoBipolar} apresenta os método de acionamento para motores bipolares. Nestes métodos de acionamento se faz necessário apenas 2 terminais para cada fase. Porém a grande desvantagem destes métodos de acionamento é a necessidade de um circuito capaz de inverter a corrente em cada uma das bobinas para que se possa girar o rotor em sentido contrario, se fazendo necessário um circuito \emph{Driver} mais complexo. 
->>>>>>> origin/master
 
 \begin{table}[H]
 	\centering
