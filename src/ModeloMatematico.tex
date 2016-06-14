@@ -1,6 +1,4 @@
 
-O motor de passo híbrido pode ser analisado através do modelo dinâmico de acordo com a Figura \ref{fig:fig1} por apresentar respostas das características em regime transitório e estacionário. O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
-
 O motor de passo híbrido pode ser analisado através do modelo dinâmico de acordo com a Fig. \ref{fig:fig1} por apresentar respostas das características em regime transitório e estacionário. O circuito equivalente é construído supondo que o circuito magnético é linear (não saturado) e a indutância mútua entre as fases é desconsiderada.
 
 \begin{figure}[H]
@@ -99,17 +97,16 @@ O torque eletromagnético produzido por motor de passo híbrido de duas fases é
 	T_e = - \rho \psi_m i_A \sin(\rho \theta) - \rho \psi_m i_B \cos(\rho \theta ) - T_d
 \end{eqnarray}
 
-O movimento do rotor é descrito pela Equação (\ref{eq:eq9a}) de rotação do movimento, o que leva em conta a soma da inércia, torque de carga, torque eletromagnético e o torque de atrito viscoso.
+O movimento do rotor é descrito pela Equação (\ref{eq:eq9a}) de rotação do movimento, o que leva em conta a soma da inércia, torque de carga, torque eletromagnético e o torque de atrito viscoso ($T_L$).
 
 \begin{eqnarray}
 \label{eq:eq9a}
-j\frac{d\omega(t)}{dt} = T_e(t) - T_L - B\omega(t)
+\frac{d\omega(t)}{dt} = T_e(t) - T_L - B\omega(t)
 \end{eqnarray}
 
 Substituindo a equação (\ref{eq:eq8a}) em (\ref{eq:eq9a}) obtemos a equação (\ref{eq:eq10a}).
 
 \scriptsize
-Substituindo a Equação (\ref{eq:eq8a}) em (\ref{eq:eq9a}) obtêm-se a Equação (\ref{eq:eq10a}).
 
 \begin{eqnarray}
 \label{eq:eq10a}
