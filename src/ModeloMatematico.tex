@@ -49,7 +49,7 @@ onde:
 	\item $\lambda$ - angulo de fase.
 \end{itemize}
 
-No caso de duas fases do estator, $\lambda = \frac{\pi}{2}$ e a equação de $E_b$ é modificado como se segue a Equação (\ref{eq:eq4a}).
+No caso de duas fases do estator, $\lambda = \frac{\pi}{2}$ e a equação de $E_b$ é modificado como se segue a equação (\ref{eq:eq4a}).
 
 \begin{eqnarray}
 		\label{eq:eq4a}
@@ -73,7 +73,7 @@ Onde:
 	\item $i_A,\ i_B$ - correntes de fase.
 \end{itemize}
 
-O torque eletromagnético ($T_e$) é formado pelas componentes do torque gerado referente a cada fase como segue nas Equações (\ref{eq:eq6a}), (\ref{eq:eq6b}).
+O torque eletromagnético ($T_e$) é formado pelas componentes do torque gerado referente a cada fase como segue nas equações (\ref{eq:eq6a}), (\ref{eq:eq6b}) \cite{stepersimulink}.
 
 \begin{eqnarray}
 \label{eq:eq6a}
@@ -82,21 +82,21 @@ T_A = i_A \rho \psi_m \sin(\rho \theta)\\
 T_B = i_B \rho \psi_m \cos(\rho \theta) 
 \end{eqnarray}
 
-Se o estator e o rotor tem dentes, o torque eletromagnético é complementado pela componente de torque devido a relutância gerado pela saliências do endentamento, chamado de torque de retenção (\textit{detent torque}) ou torque endentação ($T_d$), possui a Equação (\ref{eq:eq7a}).
+Se o estator e o rotor tem dentes, o torque eletromagnético é complementado pela componente de torque devido a relutância gerado pela saliências do endentamento, chamado de torque de retenção (\textit{detent torque}) ou torque endentação ($T_d$), possui a equação (\ref{eq:eq7a}) \cite{kenjo}.
 
 \begin{eqnarray}
 \label{eq:eq7a}
 T_d = T_{d}^{max}\sin(2 \rho \theta)
 \end{eqnarray}
 
-O torque eletromagnético produzido por motor de passo híbrido de duas fases é igual ao somatório resultante da interação entre as correntes das duas fases além do fluxo magnético formado pelos ímãs juntamente com o torque de endentação como demonstra a Equação (\ref{eq:eq8a}).
+O torque eletromagnético produzido por motor de passo híbrido de duas fases é igual ao somatório resultante da interação entre as correntes das duas fases além do fluxo magnético formado pelos ímãs juntamente com o torque de endentação como demonstra a equação (\ref{eq:eq8a}) \cite{mathworkmotor}.
 
 \begin{eqnarray}
 	\label{eq:eq8a}
 	T_e = - \rho \psi_m i_A \sin(\rho \theta) - \rho \psi_m i_B \cos(\rho \theta ) - T_d
 \end{eqnarray}
 
-O movimento do rotor é descrito pela Equação (\ref{eq:eq9a}) de rotação do movimento, o que leva em conta a soma da inércia, torque de carga, torque eletromagnético e o torque de atrito viscoso ($T_L$).
+O movimento do rotor é descrito pela equação (\ref{eq:eq9a})de rotação do movimento, o que leva em conta a soma da inércia, torque de carga, torque eletromagnético e o torque de atrito viscoso ($T_L$)\cite{stepersimulink} .
 
 \begin{eqnarray}
 \label{eq:eq9a}
@@ -123,7 +123,7 @@ Com as equações definidas, utiliza-se o modelo de espaço de estados para a re
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width= \columnwidth]{Images/modeloEE_HSM.PNG}
-	\caption{ Modelo Genérico do Motor de Passo Híbrido - $Simulink^{\circledR}$ }
+	\caption{ Modelo Genérico do Motor de Passo Híbrido - $Simulink^{\circledR}$ \cite{mathworkmotor} }
 	\label{fig:fig2}
 \end{figure}
 
@@ -144,7 +144,7 @@ Os parâmetros encontrados na folha de dados são geralmente: números de fases,
 O máximo torque de retenção($T_d^{max}$) não é especificado. Este parâmetro pode  ser considerado entre $1\%-10\%$ do torque máximo de rotor travado. O máximo fluxo concatenado ($\psi_m$) não é sempre especificado. Este parâmetro pode ser obtido de forma experimental pelo acionamento do motor a uma velocidade constante $N$ (rpm) e medindo em circuito aberto a máxima tensão de enrolamento $E_f$ (V).
 
 
-O parâmetro $\psi_m$ é computacionalmente obtido pela Equação (\ref{eq:eq11a}).
+O parâmetro $\psi_m$ é computacionalmente obtido pela equação (\ref{eq:eq11a}) \cite{mathworkmotor}.
 
 \begin{eqnarray}
 \label{eq:eq11a}
@@ -157,7 +157,7 @@ Onde:
 	\item $P$ - número de pares de pólos dado por $P = \frac{360}{2mpasso}$. Aqui $m$= número de fases , $passo$ = ângulo do passo em graus.
 \end{itemize}
 
-\subsection{Curva de Torque $vs$ Velocidade}
+\subsection{Curva de Torque $vs$ Velocidade \cite{motorbas}}
 A característica de torque versus velocidade é chave para selecionar adequadamente o motor, método de acionamento para uma aplicação específica. Esta características são dependente do motor, do modo de excitação e do tipo de driver ou método de acionamento. Para melhor entender a curva é útil definirmos os diferentes aspectos da curva representado na Fig. \ref{fig:fig3}.
 
 \begin{figure}[H]
